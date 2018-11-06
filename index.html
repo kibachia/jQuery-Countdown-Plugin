@@ -78,15 +78,20 @@
 <script type="text/javascript" src="js/kinetic.js"></script>
 <script type="text/javascript" src="js/jquery.final-countdown.js"></script>
 <script type="text/javascript">  
-    $('document').ready(function() {
-        'use strict';
-        
-    	$('.countdown').final_countdown({
-            'start': 1362139200,
-            'end': 1388461320,
-            'now': 1387461319        
-        });
+ $('document').ready(function() {
+   'use strict';
+
+  var start = Date.parse('Sun Nov 04 19:20:44 +0000 2018')/1000;
+  var end = Date.parse('Mon Nov 04 19:20:44 +0000 2019')/1000;
+  var now = new Date().getTime() / 1000;
+
+    $('.countdown').final_countdown({
+      'start': start,
+      'end': end,
+      'now': now
     });
+
+ });
 </script>
 
 </body>
